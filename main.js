@@ -5,7 +5,11 @@ function getTime(){
 	var minutes = rightNow.getMinutes();
 	var secs = rightNow.getSeconds();
 
-	var finalCount = hours + ":" +  minutes + ":" + secs;  //need to call a function here
+	var addSec = (secs.toString().length < 2) ?  "0" + secs :  secs;
+	var addMin = (secs.toString().length < 2) ?  "0" + minutes :  minutes;
+	var addHour = (secs.toString().length < 2) ?  "0" + hours :  hours;  
+
+	var finalCount = addHour + ":" +  addMin + ":" + addSec;  //need to call a function here
 
 	var clockDisplay = document.querySelector('#c_clock');
 
@@ -15,11 +19,7 @@ function getTime(){
 
 var finalTime = window.setInterval(getTime,1000); 
 
-
-
-
 // //need to call a function (not string)
-
 
 // var hr; 
 // var min;
@@ -33,9 +33,6 @@ var finalTime = window.setInterval(getTime,1000);
 // Maybe use a while loop. Maybe an if/else statement. 
 // window.setInterval(  , 1000);
 
-
-
-
 // var zeroSeconds = secs(function(number) {
 // 	if (secs <= 9) {
 // 		return "0" + secs;
@@ -43,8 +40,6 @@ var finalTime = window.setInterval(getTime,1000);
 // 		return secs;
 // 	}
 // });
-
-
 
 
 
