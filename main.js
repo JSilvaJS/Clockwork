@@ -22,18 +22,29 @@ var finalTime = window.setInterval(getTime,1000);
 
 //Background Color Counter
 
-// function changeColor() {
 
-for (var i = 100000; i <= 100005; i++) {
-	console.log(i);
-};
+function getColor(){
 	
+	var rightNow = new Date();
+	var hours = rightNow.getHours(); 
+	var minutes = rightNow.getMinutes();
+	var secs = rightNow.getSeconds();
 
-	// var clockToDisplay = document.querySelector('#c_color');
+	var addSec = (secs.toString().length < 2) ?  "0" + secs :  secs;
+	var addMin = (minutes.toString().length < 2) ?  "0" + minutes :  minutes;
+	var addHour = (hours.toString().length < 2) ?  "0" + hours :  hours;  
 
-// };
+	var finalCount = '#' + addHour  +  addMin  + addSec;  
 
-// var finalColor = window.setInterval(changeColor,1000); 
+	var clockDisplay = document.querySelector('#c_color');
+	var clockBigBox = document.querySelector('.Counting_Color');
+
+	clockDisplay.innerHTML = finalCount;
+	clockBigBox.style.backgroundColor = finalCount;
+
+};
+
+var finalTime = window.setInterval(getColor,1000); 
 
 
 
