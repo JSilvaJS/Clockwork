@@ -22,9 +22,18 @@ var finalTime = window.setInterval(getTime,1000);
 
 //Background Color Counter
 
-function changeColor() {
+// function changeColor() {
 
+for (var i = 100000; i <= 100005; i++) {
+	console.log(i);
 };
+	
+
+	// var clockToDisplay = document.querySelector('#c_color');
+
+// };
+
+// var finalColor = window.setInterval(changeColor,1000); 
 
 
 
