@@ -1,3 +1,4 @@
+// Clock Counter #1
 function getTime(){
 	
 	var rightNow = new Date();
@@ -6,10 +7,10 @@ function getTime(){
 	var secs = rightNow.getSeconds();
 
 	var addSec = (secs.toString().length < 2) ?  "0" + secs :  secs;
-	var addMin = (secs.toString().length < 2) ?  "0" + minutes :  minutes;
-	var addHour = (secs.toString().length < 2) ?  "0" + hours :  hours;  
+	var addMin = (minutes.toString().length < 2) ?  "0" + minutes :  minutes;
+	var addHour = (hours.toString().length < 2) ?  "0" + hours :  hours;  
 
-	var finalCount = addHour + ":" +  addMin + ":" + addSec;  //need to call a function here
+	var finalCount = addHour + ":" +  addMin + ":" + addSec;  
 
 	var clockDisplay = document.querySelector('#c_clock');
 
@@ -19,27 +20,11 @@ function getTime(){
 
 var finalTime = window.setInterval(getTime,1000); 
 
-// //need to call a function (not string)
+//Background Color Counter
 
-// var hr; 
-// var min;
-// var sc;
+function changeColor() {
 
-// var staticTime = function(hr, min, sc) {
-// 	return hr + ":" + min + ":" + sc;
-// };
-
-//Problem is can't have single digits. We need to add zeroes for the numbers between 0 - 9. When the seconds is between 0 - 9, we need to add a zero to that piece of data.// 
-// Maybe use a while loop. Maybe an if/else statement. 
-// window.setInterval(  , 1000);
-
-// var zeroSeconds = secs(function(number) {
-// 	if (secs <= 9) {
-// 		return "0" + secs;
-// 	} else {
-// 		return secs;
-// 	}
-// });
+};
 
 
 
