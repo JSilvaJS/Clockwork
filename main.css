@@ -1,0 +1,33 @@
+.Counting_Clock {
+	position: absolute;
+	width: 700px;
+	height: 500px;
+	background-color: black;
+	text-align: center;
+	display: inline-block;
+}
+
+#c_clock {
+	font-family: 'Lobster', cursive;
+	color: white;
+	font-size: 70px;
+	line-height: 450px;
+}
+
+.Counting_Color {
+	position: absolute;
+	display: inline-block;
+	width: 700px;
+	height: 500px;
+	background-color: #26A67F;
+	text-align: center;
+	top: 600px;
+}
+
+#c_color {
+	font-family: 'Lobster', cursive;
+	color: white;
+	font-size: 70px;
+	line-height: 500px;
+	z-index: 1;
+}
